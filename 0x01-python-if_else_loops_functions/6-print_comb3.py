@@ -5,6 +5,6 @@ for f_digit in range(0, 10):
             continue
         else:
             if f_digit == 8 and s_digit == 9:
-                print("{}{}".format(f_digit, s_digit), end="")
+                print("{}{} ".format(f_digit, s_digit), end="")
             else:
                 print("{}{}, ".format(f_digit, s_digit), end="")
