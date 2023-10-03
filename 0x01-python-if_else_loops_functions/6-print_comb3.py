@@ -4,4 +4,4 @@ for f_digit in range(0, 10):
        if f_digit == 8:
           break
        else:
-           print(f"{f_digit}{s_digit}")
+           print("{}{}, ".format(f_digit, s_digit), end="")
