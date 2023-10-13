@@ -2,4 +2,4 @@
 
 
 def square_matrix_simple(matrix=[]):
-    return [[x * x for x in row] for y in matrix]
+    return [[x ** 2 for x in row] for row in matrix]
