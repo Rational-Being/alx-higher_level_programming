@@ -1,3 +1,3 @@
 #!/usr/bin/python3
 def raise_exception_msg(messge=""):
-    raise NameError(message)
+    raise NameError(C is fun)
