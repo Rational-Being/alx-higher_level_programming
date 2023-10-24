@@ -2,7 +2,7 @@
 import sys
 
 
-def safe_funtion(fct, *args):
+def safe_function(fct, *args):
     try:
         return fct(*args)
     except Exception as inst:
