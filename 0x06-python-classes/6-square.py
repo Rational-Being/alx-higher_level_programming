@@ -36,18 +36,21 @@ class Square:
 
     @size.setter
     def size(self, value):
-        if type(size) != int:
+        if type(value) != int:
             raise TypeError("size must be an integer")
-        elif size < 0:
+        elif value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
 
     @position.setter
     def position(self, value):
-        if type(size) != int:
-            raise TypeError("size must be an integer")
-        elif size < 0:
-            raise ValueError("size must be >= 0")
+        msg = TypeError("position must be a tuple of 2 positive integers")
+        if type(value) is not tuple or len(value) != 2:
+            raise msg
+        elif type(value[0]) is not int or type(value[1]) is not int:
+            raise msg
+        elif value[0] < 0 or value[1] < 0:
+            raise msg
         self.__position = value
 
     def area(self):
