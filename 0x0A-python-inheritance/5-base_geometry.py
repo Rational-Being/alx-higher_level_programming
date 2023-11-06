@@ -4,7 +4,7 @@
 created by:knowlede seeker
 """
 
-def BaseGeometry():
+class BaseGeometry:
     """
     dos nothing
     """

@@ -5,7 +5,7 @@ created by:knowlede seeker
 """
 
 
-def BaseGeometry():
+class BaseGeometry():
     """
     calculates area
     """
