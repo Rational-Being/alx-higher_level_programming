@@ -3,6 +3,8 @@
 """"
 created by:knowlede seeker
 """
+
+
 def lookup(obj):
     """
     returns object of an obj dict
