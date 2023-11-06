@@ -5,7 +5,6 @@ created by:knowlede seeker
 """
 
 
-
 class BaseGeometry():
     """
     calculates area
