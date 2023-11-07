@@ -20,4 +20,4 @@ class Square(BaseGeometry):
         return "[Square]" + str(self.__size) + "/" + str(self.__size)
 
     def area(self):
-        return self.__size ** 2
+        return self.__size**2
