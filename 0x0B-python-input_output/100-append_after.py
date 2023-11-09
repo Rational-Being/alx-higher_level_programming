@@ -5,7 +5,7 @@ created by: knowlegde seeker
 
 """
 
-def append_after(filename="", search_string="", new_string="")
+def append_after(filename="", search_string="", new_string=""):
     """
     prints a text file
     """
