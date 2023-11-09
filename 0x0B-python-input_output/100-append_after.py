@@ -9,6 +9,7 @@ def append_after(filename="", search_string="", new_string=""):
     """
     prints a text file
     """
+    text = ""
     with open(filename) as f:
         for line in f:
             text += line
