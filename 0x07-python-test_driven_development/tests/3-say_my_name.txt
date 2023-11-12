@@ -1,0 +1,20 @@
+Edge cases test for tests/3-say_my_name.txt 
+Testing 3-say_name module
+
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+>>> say_my_name("Rational", "Being")
+My name is Rational Being
+
+>>> say_my_name("Rational")
+My name is Rational
+
+>>> say_my_name("")
+My name is
+
+>>> say_my_name(2, "Being")
+Traceback (mosr recent call last):
+...
+TypeError: first_name must be a string
+
+

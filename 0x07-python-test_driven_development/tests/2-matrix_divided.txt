@@ -1,0 +1,6 @@
+Edge cases test for tests/2-matrix_divided.txt 
+Testing add_integer() function
+
+>>> add_integer = __import__('2-matric_divided').matrix_divided
+
+>>> matrix_divided
