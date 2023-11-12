@@ -1,4 +1,4 @@
-In this folder, I will be learnin about:
+In this folder, I will learn about:
 
 How to open a file
 How to write text in a file
