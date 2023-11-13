@@ -6,6 +6,7 @@ This module crreates the a class
 
 import json
 
+
 class Base:
     """
     Class Base
