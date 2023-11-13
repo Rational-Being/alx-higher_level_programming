@@ -107,7 +107,7 @@ class Rectangle(Base):
         """
 
         for i in range(self.y):
-            print()
+            print("")
         for i in range(self.__height):
             for j in range(self.x):
                 print(" ", end="")
@@ -120,3 +120,32 @@ class Rectangle(Base):
         defines te str metod
         """
         return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.width}/{self.height}"
+
+    def update(self, *args, **kwargs):
+        """
+        experimenting with no-keyword aruments
+        """
+        if args is not None and len(args) != 0:
+            for count, arg in enumerate(args):
+                if count == 0:
+                    self.id = arg
+                elif count == 1:
+                    self.width == arg
+                elif count == 2:
+                    self.height == arg
+                elif count == 3:
+                    self.x == arg
+                elif count == 4:
+                    self.y = arg
+        elif kwargs is not None and len(kwargs) != 0:
+            for key, value in kwargs.items():
+                if key == "id":
+                    self.id = value
+                if key == "width":
+                    self.width = value
+                if key == "height":
+                    self.height = value
+                if key == "x":
+                    self.x = value
+                if key == "y":
+                    self.y = value
