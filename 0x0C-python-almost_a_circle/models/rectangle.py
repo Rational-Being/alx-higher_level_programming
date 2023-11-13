@@ -119,7 +119,10 @@ class Rectangle(Base):
         """
         defines te str metod
         """
-        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.width}/{self.height}"
+        return (
+            f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - "
+            f"{self.width}/{self.height}"
+        )
 
     def update(self, *args, **kwargs):
         """

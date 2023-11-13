@@ -5,6 +5,7 @@ This module crreates the a class
 """
 
 import json
+import csv
 
 
 class Base:
@@ -68,3 +69,37 @@ class Base:
             dummy = cls(1)
         dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """
+        returns a list of instances
+        """
+        try:
+            filename = cls.__name__ + ".json"
+            with open(filename, "r") as fil:
+                f = cls.from_json_string(fil.read())
+            return [cls.create(**x) for x in f]
+        except FileNotFoundError:
+            return []
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """
+        deserialize csv fie
+        """
+        namefile = cls.__name__ + ".csv"
+        try:
+            with open(namefile, "r", newline="") as fil:
+                if cls.__name__ == "Rectangle":
+                    paras = ["id", "width", "height", "x", "y"]
+                else:
+                    paras = ["id", "size", "x", "y"]
+                dict_content = csv.DictReader(csvfile, paras=paras)
+                dict_content = [
+                    dict([key, int(value)] for key, value in a.items())
+                    for a in dict_content
+                ]
+                return [cls.create(**a) for a in dict_content]
+        except IOError:
+            return []
