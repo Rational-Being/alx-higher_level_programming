@@ -149,3 +149,15 @@ class Rectangle(Base):
                     self.x = value
                 if key == "y":
                     self.y = value
+
+    def to_dictionary(self):
+        """
+        Returns te dictionary of a te square class
+        """
+        return {
+            "id": self.id,
+            "x": self.x,
+            "y": self.y,
+            "width": self.width,
+            "height": self.height,
+        }
