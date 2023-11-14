@@ -6,7 +6,7 @@ This module crreates the a class
 
 import json
 import csv
-
+from turtle import Turtle as turt
 
 class Base:
     """
@@ -103,3 +103,41 @@ class Base:
                 return [cls.create(**a) for a in dict_content]
         except IOError:
             return []
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """
+        Draw the shapes with turtle
+        """
+        t = turt()
+        t.screen.bgcolor("#964B00")
+        t.pensize(5)
+        t.shape("turtle")
+
+        t.color("#000000")
+        for i in list_rectangles:
+            t.showturtle()
+            t.up()
+            t.goto(i.x, i.y)
+            t.down()
+            for j in range(2):
+                t.forward(i.width)
+                t.left(90)
+                t.forward(i.height)
+                t.left(90)
+            t.hideturtle()
+
+        t.color("#c7a2w0")
+        for k in list_squares:
+            t.showturtle()
+            t.up()
+            t.goto(k.x, k.y)
+            t.down()
+            for l in range(2):
+                t.forward(l.width)
+                t.left(90)
+                t.forward(l.height)
+                t.left(90)
+            t.hideturtle()
+
+        turt.exitonclick()
