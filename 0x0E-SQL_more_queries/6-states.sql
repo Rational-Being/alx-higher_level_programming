@@ -1,6 +1,7 @@
 -- cretes table
 
 CREATE DATABASE IF NOT EXITS hbtn_0d_usa;
+USE hbtn_0d_usa;
 CREATE TABLE IF NOT EXISTS state ON hbtn_0d_usa(
 	id INT AUTO-GENERATED UNIQUE NOT NULL PRIMARY KEY,
 	name VARCHAR(256) NOT NULL);
