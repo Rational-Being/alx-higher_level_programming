@@ -8,10 +8,10 @@ class Square extends square {
     }
 
     charPrint(c) {
-        if (c === undefined) {
+        if (!c) {
             c = 'X';
         }
-        this.print(c);
+        console.log(c.repeat(this.width));
     }
 
 };
