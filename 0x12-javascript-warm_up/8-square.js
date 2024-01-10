@@ -3,9 +3,9 @@
 const arg = process.argv[2];
 
 if (isNaN(arg)) {
-    console.log('Missing size');
+  console.log('Missing size');
 } else {
-    for (let i = 0; i < arg; i, i++) {
-        console.log('X'.repeat(arg));
-    }
+  for (let i = 0; i < arg; i, i++) {
+    console.log('X'.repeat(arg));
+  }
 }
