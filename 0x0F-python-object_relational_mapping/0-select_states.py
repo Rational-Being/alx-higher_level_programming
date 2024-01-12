@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 
-    """ 
-    This script conects to a database, create a cursor object
-    selct rows, print them and close the database
-    """
+""" 
+This script conects to a database, create a cursor object
+selct rows, print them and close the database
+"""
 
 import MySQLdb
 from sys import argv
@@ -19,7 +19,7 @@ if __name__ == '__main__':
     rows = cur.fetchall()
     
     for row in rows:
-        print(row)
+        print (row)
     
     cur.close()
     connect_db.close()
