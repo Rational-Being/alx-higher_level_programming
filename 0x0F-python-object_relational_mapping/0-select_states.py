@@ -1,8 +1,8 @@
-#!usr/bin/python3
+#!/usr/bin/python3
 
     """ 
     This script conects to a database, create a cursor object
-    selct rows, print them and 
+    selct rows, print them and close the database
     """
 
 import MySQLdb
@@ -23,5 +23,3 @@ if __name__ == '__main__':
     
     cur.close()
     connect_db.close()
-
-    
