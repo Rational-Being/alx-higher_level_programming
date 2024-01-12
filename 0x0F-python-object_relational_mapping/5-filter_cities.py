@@ -9,17 +9,15 @@ import MySQLdb
 from sys import argv
 
 if __name__ == '__main__':
-    args = argv
-    
-    connect_db = MySQLdb.connect(host='localhost', user=args[1], passwd=args[2], db=args[3], port=3306)
+   
+    connect_db = MySQLdb.connect(host='localhost', user=argv[1], passwd=argv[2], db=argv[3], port=3306)
     
     cur = connect_db.cursor()
-    cur.execute('SELECT * FROM states ORDER BY states.id;')
+    cur.execute('SELECT cities.name FROM cities WHERE state.id = (SELECT id FROM states WHERE name LIKE BINARY %s) ORDER BY cities.id;', (argv[4]))
     
     rows = cur.fetchall()
     
-    for row in rows:
-        print(row)
+    print(", ".join([row[1] for row in rows]))
     
     cur.close()
     connect_db.close()
