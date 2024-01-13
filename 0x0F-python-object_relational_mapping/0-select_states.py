@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-""" 
+"""
 This script conects to a database, create a cursor object
 selct rows, print them and close the database
 """
