@@ -1,5 +1,5 @@
 #!/usr/bin/bash
 
-sed -i '/^$/d' "$1"
+#sed -i '/^$/d' "$1"
 #sed -i '1s|/usr||' "$1"
 #sed -i '1s|env ||' "$1"
