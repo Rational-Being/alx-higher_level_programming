@@ -1,0 +1,4 @@
+#!/usr/bin/bash
+
+sed -i '1s|/usr||' "$1"
+sed -i '1s|env ||' "$1"
