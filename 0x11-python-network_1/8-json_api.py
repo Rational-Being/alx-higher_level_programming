@@ -5,6 +5,5 @@ to a URL sith the letter as a parameter
 """
 form requests import post
 
-if __name__ == __main__:
-    url = "https://api.github.com/user"
+if __name__ == "__main__":
     

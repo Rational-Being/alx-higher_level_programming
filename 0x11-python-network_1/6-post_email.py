@@ -7,8 +7,8 @@ and finally displays the body of the rreponse
 from requests import post
 from sys import argv
 
-if __name__ == __main__:
+if __name__ == "__main__":
     url = argv[1]
     email_value = {"email": argv[2]}
     response = post(url, data=email_value)
-    print(reponse.text)
+    print(response.text)
