@@ -13,17 +13,12 @@ if __name__ == "__main__":
         arg = {"q": ""}
     else:
         arg = {"q": argv[1]}
-
     response = post(url, data=arg)
-    
     try:
         json = response.json()
         if len(obj) == 0:
             print('No result')
         else:
             print('[{}] {}'.format(json['id'], json['name']))
-    except:
-            print('Not a valid JSON')
-
-
-
+    except Exception:
+        print('Not a valid JSON')
